@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        
+        <p for="firstName">First Name</p>
+        <input type="text" id="firstName" name="First Name"><br>
+        <p class="left" for="lastName">Last Name</p>
+        <input class="left" type="text" name="Last Name" id="lastName">
+
+        <p>
+            <p>Client of:</p>
+            <label for="multi">Client of:</label><br>
+            <select multiple id="multi" name="multi">
+                <option>Telekom</option>
+                <option>Orange</option>
+                <option>Vodafone</option>
+                <option>Digi</option>
+            </select>
+        </p>
+
+        <p class="Name" for="email">Email (Optional)</p>
+        <input type="email" name="Email" id="email" value="you@example.com"><br>
+        <div>
+                <label for="msg">Adress</label><br>
+                <textarea id="msg" name="user_message">1234 Main St</textarea>
+              </div>
+        <p for="country">Country</p>
+        <p>
+            <label for="simple">Country</label><br>
+            <select id="simple" name="simple">
+                <option>
+                    <Choose class=""></Choose>Choose...
+                </option>
+                <option>Romania</option>
+                <option>SUA</option>
+            </select>
+        </p>
+
+        <p class="Name" for="State">State</p>
+        <p>
+            <label for="simple">State</label><br>
+            <select id="simple" name="simple">
+                <option>
+                    <Choose class=""></Choose>Choose...
+                </option>
+                <option>Bucuresti</option>
+                <option>Sibiu</option>
+                <option>Iasi</option>
+                <option>Timisoara</option>
+                <option>Arizona</option>
+                <option>Colorado</option>
+                <option>New Mexico</option>
+                <option>Washington</option>
+                <option>Florida</option>
+                <option>Hawaii</option>
+                <option>New Jersey</option>
+            </select>
+        </p>
+        <hr><br>
+        <input type="checkbox" name="Shipping" value="ship"><a>Shipping Adress is the same as my billing adress</a> <br>
+        <hr>
+        <h2>Payment</h2>
+        <h1></h1>
+        <input type="radio" name="paymethod" value="credit"><a>Credit card</a><br>
+        <input type="radio" name="paymethod" value="debit"><a>Debit card</a><br>
+        <input type="radio" name="paymethod" value="paypal"><a>Paypal</a><br>
+
+
+        <button type="submit" value="Continue to checkout">
+            <h2>Continue to checkout</h2>
+        </button>
+        <h1> </h1>
+    </form>
+
+
+</body>
+
+</html>

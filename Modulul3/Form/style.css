@@ -1,0 +1,59 @@
+a {
+    position: relative;
+    top: -0.4cm;
+}
+
+p.left {
+    position: absolute;
+    left: 7cm;
+    top: 0cm;
+}
+
+input.left {
+    position: absolute;
+    left: 7cm;
+    top: 1cm;
+}
+
+p.Name {
+    position: relative;
+    top: -0.4cm;
+}
+
+input {
+    position: relative;
+    top: -0.33cm;
+}
+
+select {
+    position: relative;
+    top: -0.5cm;
+}
+
+button {
+    background: #0099ff;
+    color: white;
+    position: absolute;
+    width: 800px;
+    height: 40px;
+    border-radius: 8px
+}
+
+label.l {
+    position: relative;
+    top: -0.5cm;
+    font-size: 140%
+}
+
+h1 {
+    text-decoration: line-through;
+    color: darkgray;
+    font-size: small;
+    position: relative;
+    top: -0.5cm;
+}
+
+h2 {
+    position: relative;
+    top: -0.3cm;
+}
