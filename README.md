@@ -5,5 +5,5 @@ Trainer: @Dragos Dehelean
 * [SlideShow](https://lorena4.github.io/JavaScript-Projects/Modulul7/slideshow_start/) 
 * [Shopping List](https://lorena4.github.io/JavaScript-Projects/Modulul7/shopping_list/)
 * [Dog Finder](https://lorena4.github.io/JavaScript-Projects/Modulul8/dog_finder/)
-* [Cat Finder](https://lorena4.github.io/JavaScript-Projects/Modulul9/)
+* [Cat Finder](https://lorena4.github.io/JavaScript-Projects/Modulul9/cat_finder/)
 
