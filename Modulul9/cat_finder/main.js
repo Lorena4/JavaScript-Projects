@@ -2,11 +2,6 @@ var selectBreed = document.getElementById("breedSelect");
 var imageBreed = document.getElementById("catImg");
 var infoAboutBreed = document.getElementById("breedInfo");
 
-var selectCategory = document.getElementById("categorySelect");
-var imageCategory = document.getElementById("categoryImage");
-
-
-
 function getBreeds(){
     return fetch("https://api.thecatapi.com/v1/breeds", {
         method: "GET",
@@ -30,16 +25,7 @@ function getImages(){
 }
 
 
-function getCategories(){
-    return fetch("https://api.thecatapi.com/v1/categories",{
-        method:"GET",
-        mode:"cors",
-        headers: {
-            "x-api-key": "b77e8861-8f11-45e4-930a-1a28e7287dd2",
-        }
-    })
-    .then(res => res.json())
-}
+
 
 
 
@@ -55,9 +41,6 @@ getImages().then(data => {
     showImageCategory(data);
 });
 
-getCategories().then(data => {
-    loadInfoCategory(data);
-})
 
 
 function showImageBreed(object){
@@ -78,7 +61,6 @@ function showImageCategory(object){
     imageCategory.appendChild(image);
 };
 
-
 function loadInfoBreed(array){
     array.forEach(element => {
         var Option = document.createElement("option");
@@ -86,15 +68,6 @@ function loadInfoBreed(array){
         selectBreed.appendChild(Option);
     });
 };
-
-function loadInfoCategory(array){
-    array.forEach(element => {
-        var Option = document.createElement("option");
-        Option.textContent = element.name;
-        selectCategory.appendChild(Option);
-    });
-};
-
 
 function makeStars(nr){
     var stars='';
@@ -165,47 +138,5 @@ imageBreed.addEventListener("click", () =>{
 });
 
 
-
-
-
-
-selectCategory.addEventListener("change", (event) => {
-    imageCategory.removeChild(imageCategory.firstChild);
-    getCategories().then(data => {
-        data.forEach(element =>{
-            if (element.name === event.target.value){
-                loadInfoCategory(element);
-                fetch("https://api.thecatapi.com/images/search?category_ids=" +element.id, {
-                    method: "GET",
-                    mode: "cors",
-                    headers: {
-                    "x-api-key": "b77e8861-8f11-45e4-930a-1a28e7287dd2",
-                    }
-                })
-                    .then(res => res.json())
-                    .then(data => showImageCategory(data))                             
-            }
-        });
-    });
-});
-
-imageCategory.addEventListener("click", () =>{
-    imageCategory.removeChild(imageCategory.firstChild);
-    getCategories().then(data => {
-        data.forEach(element =>{
-            if (element.name === selectCategory.value){
-                fetch("https://api.thecatapi.com/images/search?category_ids=" +element.id, {
-                    method: "GET",
-                    mode: "cors",
-                    headers: {
-                    "x-api-key": "b77e8861-8f11-45e4-930a-1a28e7287dd2",
-                    }
-                })
-                    .then(res => res.json())
-                    .then(data => showImageCategory(data))                             
-            }
-        });
-    });
-});
 
 
